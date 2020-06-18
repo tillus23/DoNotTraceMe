@@ -27,18 +27,17 @@ class PingDevice:
         except Exception:
             self.status = False
 
-pingMaxRes = PingDevice('Max','192.168.0.241')
-pingTillRes = PingDevice('Till','192.168.0.220')
+devicesToPing = [PingDevice('Max','192.168.0.241'), PingDevice('Till','192.168.0.220'), PingDevice('Lara','192.168.0.87')]
 
 @app.before_first_request
 def pingAllMobiles():
-    pingMaxRes.ping()
-    pingTillRes.ping()
+    for dev in devicesToPing:
+        dev.ping()
 
 
 @app.route('/')
 def index():
-    return render_template('template.html', pingDevices=[pingTillRes,pingMaxRes])
+    return render_template('template.html', pingDevices=devicesToPing)
 
 
 def pingOk(sHost):
@@ -55,4 +54,4 @@ if __name__ == "__main__":
     scheduler.start()
     atexit.register(lambda: scheduler.shutdown())
 
-    app.run(host='0.0.0.0', port=8080, debug=True)
+    app.run(host='0.0.0.0', port=80, debug=True)
