@@ -37,17 +37,16 @@
     <th>Name</th>
     <th>Status</th>
     <th>Refresh</th>
+    <th>Last Seen</th>
   </tr>
+  {% for dev in pingDevices %}
   <tr>
-    <td>Max</td>
-    <td>{{ pingMaxRes }}</td>
-    <td>{{ timestamp }}</td>
-  </tr>
-  <tr>
-    <td>Till</td>
-    <td>{{ pingTillRes }}</td>
-    <td>{{ timestamp }}</td>
-  </tr>
+    <td>{{ dev.name }}</td>
+    <td>{{ dev.status }}</td>
+    <td>{{ dev.lastRefresh }}</td>
+    <td>{{ dev.lastSeen }}</td>
+  </tr> 
+  {% endfor %}
 </table>
 
 </body>
