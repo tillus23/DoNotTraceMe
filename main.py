@@ -27,7 +27,12 @@ class PingDevice:
         except Exception:
             self.status = False
 
-devicesToPing = [PingDevice('Max','192.168.0.241'), PingDevice('Till','192.168.0.220'), PingDevice('Lara','192.168.0.87')]
+devicesToPing = [
+    PingDevice('Max','192.168.0.241'), 
+    PingDevice('Till','192.168.0.220'), 
+    PingDevice('Lara','192.168.0.87'),
+    PingDevice('Anna','192.168.0.80')
+    ]
 
 @app.before_first_request
 def pingAllMobiles():
