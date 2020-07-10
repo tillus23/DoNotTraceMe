@@ -28,11 +28,9 @@ class PingDevice:
             self.status = False
 
 devicesToPing = [
-    PingDevice('Max','192.168.0.241'), 
-    PingDevice('Till','192.168.0.220'), 
-    PingDevice('Lara','192.168.0.87'),
-    PingDevice('Anna','192.168.0.80'),
-    PingDevice('Igor','192.168.0.234')
+    PingDevice('Till','192.168.0.163'), 
+    PingDevice('Lara','192.168.0.13'),
+    PingDevice('Igor','192.168.0.155')
     ]
 
 @app.before_first_request
