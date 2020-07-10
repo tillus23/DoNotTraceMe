@@ -28,7 +28,7 @@ class PingDevice:
             self.status = False
 
 devicesToPing = [
-    PingDevice('Till','192.168.0.163'), 
+    PingDevice('Till','192.168.0.162'), 
     PingDevice('Lara','192.168.0.13'),
     PingDevice('Igor','192.168.0.155')
     ]
