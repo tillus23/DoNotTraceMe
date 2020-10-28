@@ -30,7 +30,8 @@ class PingDevice:
 devicesToPing = [
     PingDevice('Till','192.168.0.162'), 
     PingDevice('Lara','192.168.0.13'),
-    PingDevice('Igor','192.168.0.155')
+    PingDevice('Igor','192.168.0.155'),
+    PingDevice('Xenia','192.168.0.194')  
     ]
 
 @app.before_first_request
